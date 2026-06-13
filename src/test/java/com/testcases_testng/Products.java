@@ -3,6 +3,7 @@ package com.testcases_testng;
 import org.testng.annotations.Test;
 
 import com.constants.ApiEndpoints;
+import com.dataproviders.ExcelDataProvider;
 import com.payloads.CreateProduct_POJO;
 import com.payloads.UpdateProduct_POJO;
 
@@ -15,14 +16,20 @@ import java.util.List;
 
 public class Products extends BaseClass{
 	
-	@Test
-	public void Product() {
+	// Test Case to Validate Products API
+	
+	@Test(dataProvider="productTestData",dataProviderClass=ExcelDataProvider.class)
+	public void Product(String name,String type,String op,String path,String value) {
+		
+		logger.info("Starting Products API Test Case");
 		
 		// Create Product
 		
+		logger.info("Create Product Started");
+		
 		CreateProduct_POJO requestBody=new CreateProduct_POJO();
-		requestBody.setName("software product");
-		requestBody.setType("SERVICE");
+		requestBody.setName(name);
+		requestBody.setType(type);
 		
 		Response res=given()
 			.spec(requestSpec)
@@ -37,7 +44,11 @@ public class Products extends BaseClass{
 		
 		String id=res.jsonPath().getString("id");
 		
+		logger.info("Create Product Completed");
+		
 		// List Products
+		
+		logger.info("List of Products Started");
 		
 		given()
 			.spec(requestSpec)
@@ -47,7 +58,11 @@ public class Products extends BaseClass{
 			.spec(responseSpec)
 			.statusCode(200);
 		
+		logger.info("List of Products Completed");
+		
 		// Show Product Details
+		
+		logger.info("Show Product Details Started");
 		
 		given()
 			.spec(requestSpec)
@@ -58,14 +73,18 @@ public class Products extends BaseClass{
 			.spec(responseSpec)
 			.statusCode(200);
 		
+		logger.info("Show Product Details Completed");
+		
 		// Update Product
 		
-		UpdateProduct_POJO data=new UpdateProduct_POJO();
-		data.setOp("add");
-		data.setPath("/description");
-		data.setValue("entertainment service");
+		logger.info("Update Product Started");
 		
-		List<UpdateProduct_POJO> requestBody2=new ArrayList();
+		UpdateProduct_POJO data=new UpdateProduct_POJO();
+		data.setOp(op);
+		data.setPath(path);
+		data.setValue(value);
+		
+		List<UpdateProduct_POJO> requestBody2=new ArrayList<>();
 		requestBody2.add(data);
 		
 		given()
@@ -76,6 +95,8 @@ public class Products extends BaseClass{
 			.patch(ApiEndpoints.updateProductDetails)
 		.then()
 			.statusCode(204);
+		
+		logger.info("Update Product Ended");
 		
 		
 	}

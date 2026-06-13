@@ -1,0 +1,15 @@
+2026-06-13 08:54:51.887 [main] INFO  Products - Initializing Request Specification
+2026-06-13 08:54:52.285 [main] INFO  GenerateToken - Token Generation Started
+2026-06-13 08:54:53.645 [main] INFO  GenerateToken - Token Generated Successfully
+2026-06-13 08:54:53.990 [main] INFO  Products - Request Specification Initialized Successfully
+2026-06-13 08:54:53.991 [main] INFO  Products - Initializing Response Specification
+2026-06-13 08:54:53.993 [main] INFO  Products - Response Specification Initialized Successfully
+2026-06-13 08:54:54.457 [main] INFO  Products - Starting Products API Test Case
+2026-06-13 08:54:54.458 [main] INFO  Products - Create Product Started
+2026-06-13 08:54:55.804 [main] INFO  Products - Create Product Completed
+2026-06-13 08:54:55.804 [main] INFO  Products - List of Products Started
+2026-06-13 08:54:56.886 [main] INFO  Products - List of Products Completed
+2026-06-13 08:54:56.886 [main] INFO  Products - Show Product Details Started
+2026-06-13 08:54:58.068 [main] INFO  Products - Show Product Details Completed
+2026-06-13 08:54:58.068 [main] INFO  Products - Update Product Started
+2026-06-13 08:54:58.627 [main] INFO  Products - Update Product Ended

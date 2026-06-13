@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Configuration status="DEBUG">
+
+<!--PROPERTIES-->
+<Properties>
+	<Property name="LOG_PATTERN">
+		%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %c{1} - %msg%n
+ 	</Property>
+ 	<Property name="LOG_DIR">logs</Property>
+</Properties>
+
+<!--APPENDERS-->
+<Appenders>
+	<!--CONSOLE-->
+	<Console name="Console" target="SYSTEM_OUT">
+		<!--<PatternLayout pattern="${LOG_PATTERN}"/>-->
+		<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %c{1} - %msg%n"/>
+	</Console>
+	
+	<!--ROLLING FILE-->
+	<RollingFile name="FileLogger" fileName="${LOG_DIR}/automation.log" filePattern="${LOG_DIR}/automation-%d{yyyy-MM-dd}-%i.log">
+		<!--<PatternLayout pattern="${LOG_PATTERN}"/>-->
+		<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %c{1} - %msg%n"/>
+		<Policies>
+			<TimeBasedTriggeringPolicy/>
+			<SizeBasedTriggeringPolicy size="10MB"/>
+		</Policies>
+		<DefaultRolloverStrategy max="10"/>
+	</RollingFile>
+</Appenders>
+
+<!--LOGGERS-->
+<Loggers>
+	<!--REDUCE NOISE-->
+	<Logger name="io.rest-assured" level="warn"/>
+	<Logger name="org.apache.http" level="warn"/>
+	
+	<!--ROOT LOGGER-->
+	<Root level="info">
+		<!--<AppenderRef ref="Console"-->
+		<AppenderRef ref="FileLogger"/>
+	</Root>
+</Loggers>
+</Configuration>

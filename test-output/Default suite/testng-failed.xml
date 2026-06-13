@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testcases_testng.Products">
+      <class name="com.testcases_testng.Orders">
         <methods>
-          <include name="Product"/>
           <include name="requestSpecification"/>
+          <include name="Order" invocation-numbers="0 1 2 3 4 5 6 7 8"/>
         </methods>
-      </class> <!-- com.testcases_testng.Products -->
+      </class> <!-- com.testcases_testng.Orders -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,30 @@
+2026-06-12 08:42:26.125 [main] INFO  Products - Initializing Request Specification
+2026-06-12 08:42:26.482 [main] INFO  GenerateToken - Token Generation
+2026-06-12 08:42:28.514 [main] INFO  GenerateToken - Token Generated Successfully
+2026-06-12 08:42:28.871 [main] INFO  Products - Request Specification Initialized Successfully
+2026-06-12 08:42:28.871 [main] INFO  Products - Initializing Response Specification
+2026-06-12 08:42:28.873 [main] INFO  Products - Response Specification Initialized Successfully
+2026-06-12 08:42:29.279 [main] INFO  Products - Starting Products API Test Case
+2026-06-12 08:42:29.280 [main] INFO  Products - Create Product Started
+2026-06-12 08:42:30.655 [main] INFO  Products - Create Product Completed
+2026-06-12 08:42:30.656 [main] INFO  Products - List of Products Started
+2026-06-12 08:42:31.157 [main] INFO  Products - List of Products Completed
+2026-06-12 08:42:31.158 [main] INFO  Products - Show Product Details Started
+2026-06-12 08:42:32.284 [main] INFO  Products - Show Product Details Completed
+2026-06-12 08:42:32.284 [main] INFO  Products - Update Product Started
+2026-06-12 08:42:33.509 [main] INFO  Products - Update Product Ended
+2026-06-12 08:45:44.630 [main] INFO  Products - Initializing Request Specification
+2026-06-12 08:45:44.952 [main] INFO  GenerateToken - Token Generation Started
+2026-06-12 08:45:46.765 [main] INFO  GenerateToken - Token Generated Successfully
+2026-06-12 08:45:47.062 [main] INFO  Products - Request Specification Initialized Successfully
+2026-06-12 08:45:47.063 [main] INFO  Products - Initializing Response Specification
+2026-06-12 08:45:47.064 [main] INFO  Products - Response Specification Initialized Successfully
+2026-06-12 08:45:47.508 [main] INFO  Products - Starting Products API Test Case
+2026-06-12 08:45:47.508 [main] INFO  Products - Create Product Started
+2026-06-12 08:45:48.818 [main] INFO  Products - Create Product Completed
+2026-06-12 08:45:48.818 [main] INFO  Products - List of Products Started
+2026-06-12 08:45:50.004 [main] INFO  Products - List of Products Completed
+2026-06-12 08:45:50.004 [main] INFO  Products - Show Product Details Started
+2026-06-12 08:45:51.104 [main] INFO  Products - Show Product Details Completed
+2026-06-12 08:45:51.104 [main] INFO  Products - Update Product Started
+2026-06-12 08:45:52.269 [main] INFO  Products - Update Product Ended
